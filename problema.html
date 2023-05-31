@@ -5,17 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TPGN Problema</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="./img/Design sem nome2.png">
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header>
-        <img src="img/Design sem nome2.png" alt="Logo TPGN">
-        
-        <nav>
-            <ul>
-                <li id="pagina-atual"><a href="index.html">Home</a></li>
-                <li><a href="">Problema</a></li>
-                <li><a href="">Produto</a></li>
+        <img src="./img/Design sem nome2.png" alt="Logo TPGN">
+        <h1>TECHPULSE GLOBAL NETWORK</h1>
+        <h1 id="sigla">TPGN</h1>
+        <nav class="nav-menu">
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a id="pagina-atual" href="./problema.html">Problema</a></li>
+                <li><a href="./produto.html">Produto</a></li>
+                <li><a href="">Impactos</a></li>
+                <li><a href="">Pitch</a></li>
+                <li><a href="">Suporte</a></li>
+            </ul>
+        </nav>
+
+        <div class="container-menu-mobile">
+            <button onclick="animar()" id="btn-menu">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </button>
+        </div>
+
+        <nav class="nav-menu-mobile">
+            <ul class="menu-mobile"  id="menu-mobile">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./problema.html">Problema</a></li>
+                <li><a href="./produto.html">Produto</a></li>
                 <li><a href="">Impactos</a></li>
                 <li><a href="">Pitch</a></li>
                 <li><a href="">Suporte</a></li>
@@ -38,7 +60,9 @@
 
 
 
-       
+        <div>
+            <img id="logo-apagado" src="./img/Logo(SemFundo).png" alt="Logo TPGN apagado">
+        </div>
     </main>
     <footer>
 
