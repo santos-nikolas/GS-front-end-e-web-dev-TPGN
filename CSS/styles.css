@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -23,6 +24,7 @@ header ul {
     justify-content: flex-end;
     list-style: none;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
   }
   
   header ul li {
