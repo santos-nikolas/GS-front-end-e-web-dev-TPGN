@@ -219,6 +219,34 @@ header h1 {
 .beneficio img {
     margin-top: -20rem;
 }
+/* ====================================== IMPACTOS ====================================== */
+.container-impactos img {
+    max-width: 500px;
+    width: 100%;
+}
+
+.container-impactos {
+    text-align: justify;
+    margin: 2rem;
+}
+.agricultura-vertical h2, 
+.comunidades h2{
+    font-size: 4.5rem;
+    width: 100%;
+}
+.agricultura-vertical p,
+.comunidades p{
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    max-width: 1100px;
+    width: 100%;
+}
+.agricultura-vertical,
+.comunidades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 
 /* ====================================== PRODUTO ====================================== */
