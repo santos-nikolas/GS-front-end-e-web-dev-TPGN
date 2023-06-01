@@ -7,12 +7,9 @@
 html{
     font-size: 62.5%; 
     overflow-x: hidden;
+    font-family: 'Nunito', sans-serif;
 }
-.container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+
 header{
     display: flex;
     width: 100%;
@@ -34,7 +31,6 @@ header{
   }
   
 .menu li {
-    /* padding: 4rem; */
     font-size: 2.5rem;
     width: 15rem;
     height: 15rem;
@@ -45,6 +41,7 @@ header{
     text-decoration: none;
     color: white;
     line-height: 25rem;
+    font-weight: bold;
 }
 
 .menu li a:hover {
@@ -84,6 +81,7 @@ header h1 {
     width: 100%;
     height: 100vh;
     visibility: hidden;
+    font-weight: bold;
 }
 
 /* ====================================== HOME ====================================== */
@@ -91,6 +89,10 @@ header h1 {
 .container {
     margin: 2rem;
     text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    
+
 }
 
 .quem-somos {
@@ -137,29 +139,86 @@ header h1 {
     z-index: -1;
 }
 
-  /* ====================================== PROBLEMA ====================================== */
+/* ====================================== PROBLEMA ====================================== */
+
+.container-problema {
+    margin: 2rem;
+    text-align: justify;
+}
+
+.problema {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1700px;
+    width: 100%;
+}
+
+.problema h2 {
+    font-size: 8rem;
+}
+
+.problema p {
+    font-size: 5rem;
+    margin-top: 1rem;
+}
 
 .grafico {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
     
   }
-.graficoh3{text-align: left;
+.grafico h3 {
+    font-size: 4.5rem;
+    text-align: left;
+    max-width: 650px;
+    width: 100%;
+    margin-top: 3rem;
+
 }
 .grafico img {
     width: 100%;
-    max-width: 500px;
-    height: auto;
+    max-width: 700px;
+    margin: 5rem 7rem;
+    border: #000 solid 3px;
   }
 
+/* ====================================== PRODUTO ====================================== */
 
+.container-produto img {
+    max-width: 500px;
+    width: 100%;
+}
 
+.container-produto {
+    text-align: justify;
+    margin: 2rem;
+}
 
+.grow h2,
+.beneficio h2 {
+    font-size: 8rem;
+    width: 100%;
+}
 
+.grow p,
+.beneficio p {
+    font-size: 4.5rem;
+    margin-top: 1rem;
+    max-width: 1100px;
+    width: 100%;
+}
 
+.grow,
+.beneficio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-
+.beneficio img {
+    margin-top: -20rem;
+}
 
 
 
@@ -196,11 +255,33 @@ header h1 {
     }
 }
 
+@media (max-width: 1655px) {
+    .beneficio img,
+    .grow img {
+        margin: 0;
+        align-self: center;
+    }
+
+    .beneficio,
+    .grow {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
 
 @media (max-width: 1485px) {
 
     header h1 {
-        margin-top: 1rem;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1455px) {
+    .grafico img {
+        margin: 0;
     }
 }
 
@@ -267,14 +348,37 @@ header h1 {
     }
 
     .quem-somos h2,
-    .nossos-objetivos h2 {
+    .nossos-objetivos h2,
+    .problema h2,
+    .grow h2,
+    .beneficio h2 {
         font-size: 4rem;
     }
     
     .quem-somos p,
-    .nossos-objetivos p {
+    .nossos-objetivos p,
+    .problema p,
+    .grow p,
+    .beneficio p {
         font-size: 2.5rem;
     }
+
+    .grafico h3 {
+        font-size: 3rem;
+        align-self: stretch;
+    }
+
+    .grafico img {
+        max-width: 500px;
+    }
+
+    .grafico {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
 
 
 
