@@ -7,47 +7,44 @@
 html{
     font-size: 62.5%; 
     overflow-x: hidden;
+    font-family: 'Nunito', sans-serif;
 }
-.container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+
 header{
     display: flex;
     width: 100%;
     height: 15rem;
     background: linear-gradient(to right, #000, #535353);
     color: white;
-    display: flex;
+
 }
 
-header nav {
+.nav-menu {
     width: 100%;
 }
 
-header ul {
+.menu {
     display: flex;
     justify-content: flex-end;
     list-style: none;
     padding: 0;
   }
   
-header ul li {
-    padding: 4rem;
+.menu li {
     font-size: 2.5rem;
     width: 15rem;
     height: 15rem;
 }
 
-header ul li a {
+.menu li a {
     width: 100%;
     text-decoration: none;
     color: white;
-    line-height: 17rem;
+    line-height: 25rem;
+    font-weight: bold;
 }
 
-header ul li a:hover {
+.menu li a:hover {
     background-color: #202020;
     
 }
@@ -62,19 +59,40 @@ header h1 {
     width: 100%;
     margin: 5.5rem 0 0 3rem;
     font-size: 4rem;
+    font-weight: bold;
+}
+
+#sigla {
+    display: none;
 }
 
 #pagina-atual{
     text-decoration: underline;
 }
 
+/* ====================================== MENU MOBILE ====================================== */
 
+.menu-mobile {
+    background-color: #0000008c;
+    backdrop-filter: blur(1rem);
+    position: absolute;
+    left: 0;
+    top: 15rem;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    font-weight: bold;
+}
 
-  /* ====================================== HOME ====================================== */
+/* ====================================== HOME ====================================== */
 
 .container {
     margin: 2rem;
     text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    
+
 }
 
 .quem-somos {
@@ -114,22 +132,266 @@ header h1 {
 #logo-apagado {
     position: absolute;
     opacity: 0.4;
-    top: -10rem;
-    left: 130rem;
+    top: -10vw;
+    left: 60vw;
     max-width: 1300px;
     width: 100%;
     z-index: -1;
 }
+
+/* ====================================== PROBLEMA ====================================== */
+
+.container-problema {
+    margin: 2rem;
+    text-align: justify;
+}
+
+.problema {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1700px;
+    width: 100%;
+}
+
+.problema h2 {
+    font-size: 8rem;
+}
+
+.problema p {
+    font-size: 5rem;
+    margin-top: 1rem;
+}
+
 .grafico {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
     
   }
-.graficoh3{text-align: left;
+.grafico h3 {
+    font-size: 4.5rem;
+    text-align: left;
+    max-width: 650px;
+    width: 100%;
+    margin-top: 3rem;
+
 }
 .grafico img {
     width: 100%;
-    max-width: 500px;
-    height: auto;
+    max-width: 700px;
+    margin: 5rem 7rem;
+    border: #000 solid 3px;
   }
+
+/* ====================================== PRODUTO ====================================== */
+
+.container-produto img {
+    max-width: 500px;
+    width: 100%;
+}
+
+.container-produto {
+    text-align: justify;
+    margin: 2rem;
+}
+
+.grow h2,
+.beneficio h2 {
+    font-size: 8rem;
+    width: 100%;
+}
+
+.grow p,
+.beneficio p {
+    font-size: 4.5rem;
+    margin-top: 1rem;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.grow,
+.beneficio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.beneficio img {
+    margin-top: -20rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ====================================== RESPONSIVIDADE ====================================== */
+
+@media (max-width: 1740px) {
+    header h1 {
+        margin-top: 3rem;
+        max-width: 400px ;
+    }
+}
+
+@media (max-width: 1655px) {
+    .beneficio img,
+    .grow img {
+        margin: 0;
+        align-self: center;
+    }
+
+    .beneficio,
+    .grow {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+
+@media (max-width: 1485px) {
+
+    header h1 {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1455px) {
+    .grafico img {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1370px) {
+    .menu, .nav-menu {
+        display: none;
+    }
+    header h1 {
+        max-width: 650px;
+        margin-top: 5rem;
+    }
+
+    .menu-mobile a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 2rem 3rem;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .menu-mobile a:hover {
+        background-color: #00000080;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    #btn-menu {
+        width: 8rem;
+        height: 8rem;
+        margin-top: 4rem;
+        border: 0.2rem solid white;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .linha {
+        width: 5rem;
+        height: 0.4rem;
+        background-color: white;
+        display: block;
+        margin: 1.1rem auto;
+        position: relative;
+        transform-origin: center;
+        transition: 0.2s;
+    }
+
+    button.ativar .linha:nth-child(1){
+        transform: translateY(1.5rem) rotate(-45deg);
+    }
+
+    button.ativar .linha:nth-child(3){
+        transform: translateY(-1.5rem) rotate(45deg);
+    }
+
+    button.ativar .linha:nth-child(2){
+        width: 0;
+    }
+
+    .menu-mobile.abrir {
+        visibility: visible;
+    }
+
+    .quem-somos h2,
+    .nossos-objetivos h2,
+    .problema h2,
+    .grow h2,
+    .beneficio h2 {
+        font-size: 4rem;
+    }
+    
+    .quem-somos p,
+    .nossos-objetivos p,
+    .problema p,
+    .grow p,
+    .beneficio p {
+        font-size: 2.5rem;
+    }
+
+    .grafico h3 {
+        font-size: 3rem;
+        align-self: stretch;
+    }
+
+    .grafico img {
+        max-width: 500px;
+    }
+
+    .grafico {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+
+
+
+}
+
+@media (max-width: 940px) {
+    header h1 {
+        display: none;
+    }
+
+    #sigla {
+        display: block;
+        text-align: center;
+    }
+    
+}
