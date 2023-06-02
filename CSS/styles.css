@@ -294,6 +294,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 15rem;
+    margin-bottom: 15rem;
   }
   
   td, th {
@@ -331,13 +332,7 @@ table {
     display: flex;
     flex-wrap: wrap;
   }
-
-
-
-
-
-
-
+ 
 
 
 
@@ -502,5 +497,11 @@ table {
         display: block;
         text-align: center;
     }
+    
+}
+@media (max-width: 667px) {
+    .email{
+        font-size: 1rem;
+      }
     
 }
