@@ -308,16 +308,13 @@ video {
 table {
     border-collapse: collapse;
     width: 100%;
-    margin-top: 15rem;
-    margin-bottom: 15rem;
-    margin: 15rem 1rem 15rem 1rem;
+    margin: 15rem 1rem;
   }
   
   td, th {
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 0.8rem;
     font-size: 2rem;
-    justify-content: center;
     text-align: center;
   }
   
