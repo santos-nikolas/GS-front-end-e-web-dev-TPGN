@@ -78,6 +78,7 @@ footer{
     align-items: center;
     flex-wrap: wrap;
     box-shadow: 0 -0.5rem 2rem black;
+    margin-top: 5rem;
 }
 footer p,
 footer p a{
@@ -303,12 +304,14 @@ video {
     background-color: #000;
 }
 
+
 /* ====================================== SUPORTE ====================================== */
 
 table {
     border-collapse: collapse;
     width: 100%;
-    margin: 15rem 1rem;
+    margin: 20rem 1rem 20rem 1rem;
+    max-width: 1500px;
   }
   
   td, th {
@@ -328,8 +331,26 @@ table {
   .container-suporte{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
+
+ #titulo-suporte {
+    align-self: stretch;
+ } 
+
+ .titulo {
+    position: absolute;
+    left: 1rem;
+    top: 15rem;
+ }
  
+ .titulo-tabela {
+    font-size: 5rem;
+    font-weight: bold;
+ }
+
+
 
 
 
@@ -478,11 +499,25 @@ table {
         align-items: center;
     }
 
+    footer {
+        margin-top: 40rem;
+    }
 
 
 
 
 
+
+}
+
+@media (max-width: 1090px) {
+    .titulo-tabela {
+        font-size: 4rem;
+    }
+
+    footer {
+        margin-top: 25rem;
+    }
 }
 
 @media (max-width: 940px) {
@@ -494,16 +529,30 @@ table {
         display: block;
         text-align: center;
     }
+
+    .titulo-tabela {
+        font-size: 3rem;
+    }
     
 }
 @media (max-width: 780px) {
     .email{
         font-size: 1rem;
       }
+      .titulo-tabela {
+        font-size: 2rem;
+    }
+
+    footer {
+        margin-top: 20rem;
+    }
     
 }
 @media (max-width: 667px) {
     td, th{
+        font-size: 1.5rem;
+    }
+    .titulo-tabela {
         font-size: 1.5rem;
     }
 }

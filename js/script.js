@@ -3,5 +3,4 @@ function animar() {
     const menuDiv = document.querySelector("#menu-mobile")
     btnMenu.classList.toggle("ativar")
     menuDiv.classList.toggle("abrir")
-    
 }
