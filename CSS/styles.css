@@ -85,6 +85,26 @@ footer p a{
     color: white;
     font-size: 2rem;
 }
+
+footer a img{
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+}
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+#youtube{
+    width: 5.5rem;
+    height: 5.5rem;
+}
+#instagram{
+    width: 7rem;
+    height: 7rem;
+}
 /* ====================================== MENU MOBILE ====================================== */
 
 .menu-mobile {
