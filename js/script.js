@@ -4,12 +4,6 @@ function animar() {
     btnMenu.classList.toggle("ativar")
     menuDiv.classList.toggle("abrir")
 }
-function animar() {
-    const btnMenu = document.querySelector("#btn-menu")
-    const menuDiv = document.querySelector("#menu-mobile")
-    btnMenu.classList.toggle("ativar")
-    menuDiv.classList.toggle("abrir")
-}
 
 document.addEventListener("DOMContentLoaded", function() {
     const btn = document.getElementById('btn-tema');
