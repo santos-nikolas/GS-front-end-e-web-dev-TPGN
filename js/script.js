@@ -1,3 +1,6 @@
+alert('Seja bem-vindo(a)!')
+
+// =============================== MENU MOBILE ===============================
 function animar() {
     const btnMenu = document.querySelector("#btn-menu")
     const menuDiv = document.querySelector("#menu-mobile")
@@ -5,6 +8,7 @@ function animar() {
     menuDiv.classList.toggle("abrir")
 }
 
+// =============================== DARK MODE ===============================
 document.addEventListener("DOMContentLoaded", function() {
     const btn = document.getElementById('btn-tema');
     const body = document.body;
