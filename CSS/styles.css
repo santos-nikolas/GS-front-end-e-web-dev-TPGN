@@ -567,6 +567,105 @@ table {
  }
 
 
+
+/* ====================================== SUGESTÕES ====================================== */
+ .section-form {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    min-height: 97rem;
+    width: 100%;
+    
+}
+
+.form-box{
+    width: 500px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #3a3a3a;
+    color: white;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.541) 1rem 1rem;
+    position: relative;
+    top: -10rem;
+}
+.form h2 {
+    font-size: 4rem;
+    position: relative;
+    top: 0rem;
+    left: 16rem;
+    text-shadow: black 0px 10px;
+}
+
+.inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inputs input {
+    background-color: transparent;
+    outline: none;
+    width: 40rem;
+    margin-top: 6rem;
+    height: 5rem;
+    color: white;
+    visibility: visible;
+    text-align: left;
+    vertical-align: top;
+    border-radius: 1rem;
+}
+.inputs label{
+    font-size: 2rem;
+    position: absolute;
+    margin-top: 3.6rem;
+    left: 5rem;
+}
+
+.inputs button{
+    width: 400px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    position: relative;
+    top: 0rem;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.span-form{
+    font-size: 1.5rem;
+    position: relative;
+    left: -6rem;
+    color: red;
+    top: 0.5rem;
+    visibility: hidden;
+}
+
+#span-nome{
+    left: -3rem;
+}
+
+#span-tel{
+    left: -8rem;
+}
+
+#span-email {
+    left: -12.5rem;
+}
+
+#span-msg {
+    left: -5rem;
+    top: 0;
+}
+
+
   /* ====================================== RESPONSIVIDADE ====================================== */
 
 @media (max-width: 1740px) {
