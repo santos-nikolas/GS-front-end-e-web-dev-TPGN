@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" href="../img/Design sem nome2.png">
-    <script src="../js/script.js"></script>
+    <script src="../js/pastaHtml.js" defer></script>
     <title>Problema</title>
 </head>
 <body>
@@ -17,12 +17,15 @@
         <nav class="nav-menu">
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
-                <li><a id="pagina-atual" href="./problema.html">Problema</a></li>
+                <li><a href="./problema.html">Problema</a></li>
                 <li><a href="./produto.html">Produto</a></li>
                 <li><a href="./impactos.html">Impactos</a></li>
                 <li><a href="./pitch.html">Pitch</a></li>
-                <li><a href="./suporte.html">Suporte</a></li>
+                <li><a id="pagina-atual" href="./suporte.html">Suporte</a></li>
             </ul>
+            <div>
+                <a href="./login.html">Login</a>
+            </div>
         </nav>
 
         <div class="container-menu-mobile">
@@ -41,16 +44,20 @@
                 <li><a href="./impactos.html">Impactos</a></li>
                 <li><a href="./pitch.html">Pitch</a></li>
                 <li><a href="./suporte.html">Suporte</a></li>
+                <li><a href="./login.html">Login</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="tema">
-        <input type="checkbox" name="btn-tema" id="btn-tema">
-        <label for="btn-tema">
-            <img id="imagem-tema" src="img/lua-icon-removebg-preview.png" alt="lua(dark-mode)">
-        </label>
-    </div>
+    <section id="tema-tempo">
+        <div class="tema">
+            <input type="checkbox" name="btn-tema" id="btn-tema">
+            <label id="label-tema" for="btn-tema">
+                <img id="imagem-tema" src="../img/lua-icon-removebg-preview.png" alt="lua(dark-mode)">
+            </label>
+        </div>
+        <div id="data-hora"></div>
+    </section>
     
     <main class="container-problema">
         <div class="problema">
@@ -78,6 +85,7 @@
             <a  href="#"><img id="instagram" src="../img/instagram-icon.png" alt="logo instagram"></a>
             <a  href="#"><img id="whatsapp" src="../img/wpp-icon-removebg-preview (1).png" alt="logo whatsapp"></a>
         </div>
+        <div class="form-footer"><a href="./form.html">Nos envie uma mensagem!</a></div>
     </footer>
 </body>
 </html>
