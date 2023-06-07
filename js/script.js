@@ -58,3 +58,23 @@ atualizarDataHora();
 
 // Atualiza a data e hora a cada segundo
 setInterval(atualizarDataHora, 1000);
+// =============================== CARROSSEL ===============================
+const radio = document.querySelector(".manual-btn")
+let cont = 1
+
+document.querySelector("#radio1").checked = true
+
+setInterval(()=> {
+    proximaImg()
+}, 4000)
+
+function proximaImg() {
+    cont++
+
+    if(cont > 4) {
+        cont = 1
+    }
+
+    document.querySelector("#radio"+cont).checked = true
+}
+
