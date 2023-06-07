@@ -115,3 +115,18 @@ form.addEventListener("submit", (event)=> {
       form.submit();
   }
 })
+
+
+// Função que valida nome
+function isNameValid(name) {
+    const nameRegex = new RegExp(
+        /^[A-Za-z]+$/
+    )
+    
+    if(nameRegex.test(name)) {
+        return true
+    }
+    else{
+        return false
+    }
+    }
