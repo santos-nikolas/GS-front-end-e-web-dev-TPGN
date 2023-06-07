@@ -147,3 +147,18 @@ function isEmailValid(email) {
         return false
     }
 }
+
+// Função que valida o telefone
+function isTelValid(telefone) {
+    // cria uma regex para validar o telefone
+    const telRegex = new RegExp(
+         /^[()\d -]+$/
+    )
+
+    if(telRegex.test(telefone)) {
+        return true
+    }
+    else {
+        return false
+    }
+}
