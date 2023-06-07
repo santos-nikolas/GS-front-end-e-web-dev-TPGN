@@ -178,3 +178,21 @@ telInput.addEventListener("keypress", ()=>{
         telInput.value += "-"
     }
     })
+
+// =============================== LOGIN ===============================
+function logar(){
+    const loginInput = document.querySelector("#login-form")
+    const senhaInput = document.querySelector("#senha-form")
+    const spanLogin = document.querySelector(".span-login")
+    if (loginInput.value === 'Admin' && senhaInput.value === "123456") {
+        alert('Sucesso!')
+        window.location.href = "https://www.unicef.org/brazil/comunicados-de-imprensa/relatorio-da-onu-numeros-globais-de-fome-subiram-para-cerca-de-828-milhoes-em-2021";
+        loginInput.style.border = "2px solid green"
+        senhaInput.style.border = "2px solid green"
+    }
+    else{
+        loginInput.style.border = "2px solid red"
+        senhaInput.style.border = "2px solid red"
+        spanLogin.style.visibility = "visible"
+    }
+}
