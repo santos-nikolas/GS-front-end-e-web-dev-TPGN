@@ -1,5 +1,7 @@
 Guilherme Rocha Bianchini - RM: 97974
 Nikolas Rodrigues Moura dos Santos - RM: 551566
-Pedro Henrique Pedrosa Tavares RM: - 97877
+Pedro Henrique Pedrosa Tavares - RM: 97877
 Rodrigo Brasileiro - RM: 98952
 Thiago Jardim De Oliveira - RM: 551624
+
+Link Repositório GitHub - https://github.com/santos-nikolas/GS-front-end-e-web-dev-TPGN
