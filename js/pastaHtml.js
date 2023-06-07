@@ -115,3 +115,84 @@ form.addEventListener("submit", (event)=> {
       form.submit();
   }
 })
+
+
+// Função que valida nome
+function isNameValid(name) {
+    const nameRegex = new RegExp(
+        /^[A-Za-z]+$/
+    )
+    
+    if(nameRegex.test(name)) {
+        return true
+    }
+    else{
+        return false
+    }
+    }
+
+// Função que valida e-mail
+function isEmailValid(email) {
+    // cria uma regex para validar email
+    const emailRegex = new RegExp(
+        // Exemplo de email valido -> usuario123@host.com.br
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z{2,}$]/
+    );
+
+    if(emailRegex.test(email)) {
+        return true
+    }
+
+    else{
+        return false
+    }
+}
+
+// Função que valida o telefone
+function isTelValid(telefone) {
+    // cria uma regex para validar o telefone
+    const telRegex = new RegExp(
+         /^[()\d -]+$/
+    )
+
+    if(telRegex.test(telefone)) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+// Criação de máscara para o telefone
+telInput.addEventListener("keypress", ()=>{
+    let telLength = telInput.value.length
+    
+    console.log(telLength)
+    if (telLength === 0){
+        telInput.value += "("
+    }
+    if (telLength === 3) {
+        telInput.value += ") "
+    }
+    if (telLength === 10) {
+        telInput.value += "-"
+    }
+    })
+
+// =============================== LOGIN ===============================
+function logar(){
+    const loginInput = document.querySelector("#login-form")
+    const senhaInput = document.querySelector("#senha-form")
+    const spanLogin = document.querySelector(".span-login")
+    if (loginInput.value === 'Admin' && senhaInput.value === "123456") {
+        alert('Sucesso!')
+        window.location.href = "https://www.unicef.org/brazil/comunicados-de-imprensa/relatorio-da-onu-numeros-globais-de-fome-subiram-para-cerca-de-828-milhoes-em-2021";
+        loginInput.style.border = "2px solid green"
+        senhaInput.style.border = "2px solid green"
+    }
+    else{
+        loginInput.style.border = "2px solid red"
+        senhaInput.style.border = "2px solid red"
+        spanLogin.style.visibility = "visible"
+    }
+}
