@@ -113,3 +113,21 @@ form.addEventListener("submit", (event)=> {
         messageInput.style.border = "2px solid green" 
 
     } 
+
+    // Verifica se todos os campos estão vazios 
+
+    if (messageInput.value === "" && emailInput.value === "" && telInput.value === "" && nameInput.value === "") { 
+
+        alert("Preencha todos os campos") 
+
+    } 
+
+    // Verifica se todos os campos estão válidos e envia o formulário 
+
+    if ( nameInput.value !== "" && nameInput.value.length >= 3 && isNameValid(nameInput.value) && telInput.value !== "" && telInput.value.length >= 15 && isTelValid(telInput.value) && emailInput.value !== "" && isEmailValid(emailInput.value) && messageInput.value !== "" && messageInput.value.length >= 20) { 
+
+        form.submit(); 
+
+    } 
+
+}) 
