@@ -32,6 +32,109 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+
+// =============================== SUGESTÕES =============================== 
+
+const form = document.querySelector("#form") 
+const nameInput = document.querySelector("#nome-form") 
+const telInput = document.querySelector("#tel-form") 
+const emailInput = document.querySelector("#email-form") 
+const messageInput = document.querySelector("#msg-form") 
+const spans = document.querySelectorAll(".span-form") 
+
+form.addEventListener("submit", (event)=> { 
+    event.preventDefault() 
+
+    // Verifica se o nome está preenchido e se é válido 
+
+    if (nameInput.value === "" || nameInput.value.length <3 || !isNameValid(nameInput.value)) { 
+
+        spans[0].style.visibility = "visible" 
+
+        nameInput.style.border = "2px solid red" 
+
+    } 
+
+    else{ 
+
+        spans[0].style.visibility = "hidden" 
+
+        nameInput.style.border = "2px solid green" 
+
+     } 
+
+
+    //verifica se o número está preenchido e se é válido 
+
+    if (telInput.value === "" || telInput.value.length < 15 || !isTelValid(telInput.value)) { 
+
+        spans[1].style.visibility = "visible" 
+
+        telInput.style.border = "2px solid red" 
+
+    } 
+
+    else{ 
+
+        spans[1].style.visibility = "hidden" 
+
+        telInput.style.border = "2px solid green" 
+
+    } 
+
+    // Verifica se o e-mail está preenchido e se é válido 
+
+    if (emailInput.value === "" || !isEmailValid(emailInput.value)) { 
+
+        spans[2].style.visibility = "visible" 
+
+        emailInput.style.border = "2px solid red" 
+
+    } 
+
+    else{ 
+
+        spans[2].style.visibility = "hidden" 
+
+        emailInput.style.border = "2px solid green" 
+
+    } 
+
+    // Verifica se a mensagem está preenchida e se é válida 
+
+    if (messageInput.value === "" || messageInput.value.length <20) { 
+
+        spans[3].style.visibility = "visible" 
+
+        messageInput.style.border = "2px solid red" 
+
+    } 
+
+    else{ 
+
+        spans[3].style.visibility = "hidden" 
+
+        messageInput.style.border = "2px solid green" 
+
+    } 
+
+    // Verifica se todos os campos estão vazios 
+
+    if (messageInput.value === "" && emailInput.value === "" && telInput.value === "" && nameInput.value === "") { 
+
+        alert("Preencha todos os campos") 
+
+    } 
+
+    // Verifica se todos os campos estão válidos e envia o formulário 
+
+    if ( nameInput.value !== "" && nameInput.value.length >= 3 && isNameValid(nameInput.value) && telInput.value !== "" && telInput.value.length >= 15 && isTelValid(telInput.value) && emailInput.value !== "" && isEmailValid(emailInput.value) && messageInput.value !== "" && messageInput.value.length >= 20) { 
+
+        form.submit(); 
+
+    } 
+
+}) 
   // =============================== DATA E HORA ===============================
 const dataHora = document.querySelector('#data-hora');
 // Obtém a referência para o elemento HTML onde a data e hora serão exibidas
@@ -77,4 +180,3 @@ function proximaImg() {
 
     document.querySelector("#radio"+cont).checked = true
 }
-
