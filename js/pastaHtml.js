@@ -130,3 +130,20 @@ function isNameValid(name) {
         return false
     }
     }
+
+// Função que valida e-mail
+function isEmailValid(email) {
+    // cria uma regex para validar email
+    const emailRegex = new RegExp(
+        // Exemplo de email valido -> usuario123@host.com.br
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z{2,}$]/
+    );
+
+    if(emailRegex.test(email)) {
+        return true
+    }
+
+    else{
+        return false
+    }
+}
