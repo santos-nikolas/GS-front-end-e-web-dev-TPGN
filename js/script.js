@@ -77,3 +77,21 @@ form.addEventListener("submit", (event)=> {
         telInput.style.border = "2px solid green" 
 
     } 
+
+    // Verifica se o e-mail está preenchido e se é válido 
+
+    if (emailInput.value === "" || !isEmailValid(emailInput.value)) { 
+
+        spans[2].style.visibility = "visible" 
+
+        emailInput.style.border = "2px solid red" 
+
+    } 
+
+    else{ 
+
+        spans[2].style.visibility = "hidden" 
+
+        emailInput.style.border = "2px solid green" 
+
+    } 
