@@ -58,3 +58,22 @@ form.addEventListener("submit", (event)=> {
         nameInput.style.border = "2px solid green" 
 
      } 
+
+
+    //verifica se o número está preenchido e se é válido 
+
+    if (telInput.value === "" || telInput.value.length < 15 || !isTelValid(telInput.value)) { 
+
+        spans[1].style.visibility = "visible" 
+
+        telInput.style.border = "2px solid red" 
+
+    } 
+
+    else{ 
+
+        spans[1].style.visibility = "hidden" 
+
+        telInput.style.border = "2px solid green" 
+
+    } 
