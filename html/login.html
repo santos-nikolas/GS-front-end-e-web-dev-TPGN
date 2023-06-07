@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" href="../img/Design sem nome2.png">
     <script src="../js/pastaHtml.js" defer></script>
-    <title>Suporte</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Login TPGN</title>
 </head>
 <body>
     <header>
@@ -48,7 +48,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <section id="tema-tempo">
         <div class="tema">
             <input type="checkbox" name="btn-tema" id="btn-tema">
@@ -59,59 +59,30 @@
         <div id="data-hora"></div>
     </section>
 
-    <main class="container-suporte">
-        <div class="titulo">
-            <h2 id="titulo-suporte">Fale Conosco</h2>
+    <section class="section-login">
+        <div class="login-box">
+            <form action="" class="login" id="login">
+                <h2>Login</h2>
+                <div class="inputs-login">
+                    <label for="login-form">Login:</label>
+                    <input type="text" id="login-form" placeholder="Digite seu nome de usuário...">
+                </div>
+                <div class="inputs-login">
+                    <label for="senha-form">Senha:</label>
+                    <input type="password" id="senha-form"  placeholder="Digite sua senha...">
+                    <span class="span-login">Usuário ou senha incorretos!</span>
+                </div>
+                <div class="inputs-login">
+                    <buttom class="botao" type="submit" onclick="logar()">Entrar</button>
+                </div>
+            </form>
         </div>
-        <table>
-        <tr>
-            <td class="titulo-tabela">NOME/RM</td>
-            <td class="titulo-tabela">EMAIL</td>
-            <td class="titulo-tabela">TELEFONE</td>
-            <td class="titulo-tabela">WHATSAPP</td>
 
-        </tr>
-        <tr>
-            <td><p>Guilherme Rocha Bianchini</p> <p>RM: 97974</p></td>
-            <td class="email">rm97974@fiap.com.br</td>
-            <td>0000-0000</td>
-            <td>00000-0000</td>
-        </tr>
-
-        <tr>
-            <td><p>Nikolas R M dos Santos</p> <p></p>RM: 551566</td>
-            <td class="email">rm551566@fiap.com.br</td>
-            <td>0000-0000</td>
-            <td>00000-0000</td>
-        </tr>
-
-        <tr>
-            <td><p>Pedro H P Tavares</p> <p>RM: 97877</p></td>
-            <td class="email">rm97877@fiap.com.br</td>
-            <td>0000-0000</td>
-            <td>00000-0000</td>
-        </tr>
-
-        <tr>
-            <td><p>Rodrigo Brasileiro</p> <p>RM: 98952</p></td>
-            <td class="email">rm98952@fiap.com.br</td>
-            <td>0000-0000</td>
-            <td>00000-0000</td>
-        </tr>
-
-        <tr>
-            <td><p>Thiago Jardim de Oliveira</p> <p>RM: 551624</p></td>
-            <td class="email">rm551624@fiap.com.br</td>
-            <td>0000-0000</td>
-            <td>00000-0000</td>
-        </tr>
-    </table>
-
-    <div>
-        <img id="logo-apagado" src="../img/Logo(SemFundo).png" alt="Logo TPGN apagado">
-    </div>
-    </main>
-    
+        <div>
+            <img id="logo-apagado" src="../img/Logo(SemFundo).png" alt="Logo TPGN apagado">
+        </div>
+    </section>
+        
     <footer>
         <p>TechPulse Global Network ®</p>
         <p>Endereço: Av. Paulista, 1106 - 7º andar</p>
@@ -122,6 +93,5 @@
         </div>
         <div class="form-footer"><a href="./form.html">Nos envie uma mensagem!</a></div>
     </footer>
-    
 </body>
 </html>
