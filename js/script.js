@@ -95,3 +95,21 @@ form.addEventListener("submit", (event)=> {
         emailInput.style.border = "2px solid green" 
 
     } 
+
+    // Verifica se a mensagem está preenchida e se é válida 
+
+    if (messageInput.value === "" || messageInput.value.length <20) { 
+
+        spans[3].style.visibility = "visible" 
+
+        messageInput.style.border = "2px solid red" 
+
+    } 
+
+    else{ 
+
+        spans[3].style.visibility = "hidden" 
+
+        messageInput.style.border = "2px solid green" 
+
+    } 
