@@ -162,3 +162,19 @@ function isTelValid(telefone) {
         return false
     }
 }
+
+// Criação de máscara para o telefone
+telInput.addEventListener("keypress", ()=>{
+    let telLength = telInput.value.length
+    
+    console.log(telLength)
+    if (telLength === 0){
+        telInput.value += "("
+    }
+    if (telLength === 3) {
+        telInput.value += ") "
+    }
+    if (telLength === 10) {
+        telInput.value += "-"
+    }
+    })
