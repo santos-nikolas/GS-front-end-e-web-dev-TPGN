@@ -28,3 +28,33 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+
+// =============================== SUGESTÕES =============================== 
+
+const form = document.querySelector("#form") 
+const nameInput = document.querySelector("#nome-form") 
+const telInput = document.querySelector("#tel-form") 
+const emailInput = document.querySelector("#email-form") 
+const messageInput = document.querySelector("#msg-form") 
+const spans = document.querySelectorAll(".span-form") 
+
+form.addEventListener("submit", (event)=> { 
+    event.preventDefault() 
+
+    // Verifica se o nome está preenchido e se é válido 
+
+    if (nameInput.value === "" || nameInput.value.length <3 || !isNameValid(nameInput.value)) { 
+
+        spans[0].style.visibility = "visible" 
+
+        nameInput.style.border = "2px solid red" 
+
+    } 
+
+    else{ 
+
+        spans[0].style.visibility = "hidden" 
+
+        nameInput.style.border = "2px solid green" 
+
+     } 
